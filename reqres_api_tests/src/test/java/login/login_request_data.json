@@ -2,5 +2,9 @@
   "successLoginWithEmail": {
     "email": "eve.holt@reqres.in",
     "password": "cityslicka"
+  },
+  "successLoginWithUserName": {
+    "username": "eve.holt@reqres.in",
+    "password": "cityslicka"
   }
 }
