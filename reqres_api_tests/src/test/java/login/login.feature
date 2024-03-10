@@ -32,3 +32,11 @@ Feature: Pruebas para el servicio de login del API reqres.in
     When method POST
     Then status 400
     And match response == {"error": "user not found"}
+
+  #Se validará que el status code sea 400 y que el mensaje de error que indica que falta el email
+  Scenario: Login sin envío de email
+    Given path '/login'
+    And request requestData.userWithoutEmail
+    When method POST
+    Then status 400
+    And match response == {"error": "Missing email or username"}
