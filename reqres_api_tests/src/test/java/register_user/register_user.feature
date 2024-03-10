@@ -16,10 +16,18 @@ Feature: Pruebas para el servicio de registro de usuario del API regres.in
     And match response == {"id": #number,"token": '#string'}
     And match response == {"id": 4,"token": "QpwL5tke4Pnpja7X4"}
 
-  #Se Validará que el status code de la soclicitud sea 400 y el mensaje de error que indica que falta el email
+  #Se Validará que el status code de la solicitud sea 400 y el mensaje de error que indica que falta el email
   Scenario: Registro de usuario sin envío de email
     Given path '/register'
     And request requestBody.userWithoutEmail
     When method POST
     Then status 400
     And match response == {"error": "Missing email or username"}
+
+  #Se validará que status code de la solicitud sea 400 y el mensaje de error que indica que falta la contraseña
+  Scenario: Registro de usuario sin envío de contraseña
+    Given path '/register'
+    And request requestBody.userWithoutPassword
+    When method POST
+    Then status 400
+    And match response == {"error": "Missing password"}

@@ -6,5 +6,9 @@
   "userWithoutEmail": {
     "email": "",
     "password": "pistol"
+  },
+  "userWithoutPassword": {
+    "email": "sydney@fife",
+    "password": ""
   }
 }
