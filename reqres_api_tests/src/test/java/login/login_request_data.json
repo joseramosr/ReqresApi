@@ -14,5 +14,9 @@
   "userWithoutEmail": {
     "email": "",
     "password": "cityslicka"
+  },
+  "userWithoutPassword": {
+    "email": "eve.holt@reqres.in",
+    "password": ""
   }
 }
