@@ -1,17 +1,13 @@
-# Compiled class file
+# Clases compiladas
 *.class
 
-# Log file
+# Logs
+*/logs/
+*.logs
+*/log/
 *.log
 
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
+# Archivos comprimidos
 *.war
 *.nar
 *.ear
@@ -19,6 +15,40 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+
+# Reportes
+*/target/
+
+# Gradle
+.gradle/
+*/.gradle/
+*/build/
+
+
+# No ignorar el Gradle Wrapper
+!*/gradle\wrapper\gradle-wrapper.jar
+
+# Archivos de Ides
+*.classpath
+*.project
+*.metadata
+*/bin/
+*/tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+*/local.properties
+*/.settings/
+*.loadpath
+*.recommenders
+.idea/
+workspace.xml
+*/out/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+### Sonar ###
+#Sonar generated dir
+*/.sonar/
