@@ -6,8 +6,7 @@ Feature: Pruebas para el servicio de registro de usuario del API regres.in
     * def requestBody = read('./register_user_request_data.json')
 
   #Se validará que status code de la solicitud sea 200 y que el id obtenido sea un número no null y el token un string no null.
-  #Como en este escenario el id y el token siempre son los mismos, podemos añadir la validación de sus valores esperados, como
-  #Se ve en la segunda asersión.
+  #Como en este escenario el id y el token siempre son los mismos, podemos añadir la validación de sus valores esperados, como se ve en la segunda asersión.
   Scenario: Registro de usuario exitoso
     Given path '/register'
     And request requestBody.successfulUser
@@ -32,8 +31,7 @@ Feature: Pruebas para el servicio de registro de usuario del API regres.in
     Then status 400
     And match response == {"error": "Missing password"}
 
-  #Se validará que status code de la solicitud sea 400 y el mensaje de error que indica que solo usuarios definidos
-  #pueden hacer el registro
+  #Se validará que status code de la solicitud sea 400 y el mensaje de error que indica que solo usuarios definidos pueden hacer el registro
   Scenario: Registro de usuario que no está aprobado para registro exitoso
     Given path '/register'
     And request requestBody.unapprovedUser
