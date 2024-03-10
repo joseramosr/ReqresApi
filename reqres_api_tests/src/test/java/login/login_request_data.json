@@ -6,5 +6,9 @@
   "successLoginWithUserName": {
     "username": "eve.holt@reqres.in",
     "password": "cityslicka"
+  },
+  "nonExistentUser": {
+    "email": "eve.holt",
+    "password": "cityslicka"
   }
 }
