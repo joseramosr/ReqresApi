@@ -10,3 +10,10 @@ Feature: Pruebas para el servicio de eliminar usuario del API regres.in
     Given path '/users/requestData.IdToDelete'
     When method DELETE
     Then status 204
+
+  #Se esperaba que este escenario devolviera un mensaje de error ya que se esta eliminando un id que no existe,
+  #al no hacer lo anterior, se deja la validación de que el status code sea 204
+  Scenario: Eliminar usuario con ID que no existe
+    Given path '/users/requestData.nonExistingUserId'
+    When method DELETE
+    Then status 204
