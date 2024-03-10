@@ -10,5 +10,9 @@
   "userWithoutPassword": {
     "email": "sydney@fife",
     "password": ""
+  },
+  "unapprovedUser": {
+    "email": "eve.holt",
+    "password": "pistol"
   }
 }

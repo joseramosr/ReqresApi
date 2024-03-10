@@ -31,3 +31,12 @@ Feature: Pruebas para el servicio de registro de usuario del API regres.in
     When method POST
     Then status 400
     And match response == {"error": "Missing password"}
+
+  #Se validará que status code de la solicitud sea 400 y el mensaje de error que indica que solo usuarios definidos
+  #pueden hacer el registro
+  Scenario: Registro de usuario que no está aprobado para registro exitoso
+    Given path '/register'
+    And request requestBody.unapprovedUser
+    When method POST
+    Then status 400
+    And match response == {"error": "Note: Only defined users succeed registration"}
