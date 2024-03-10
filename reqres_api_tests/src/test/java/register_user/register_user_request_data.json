@@ -2,5 +2,9 @@
   "successfulUser":{
     "email": "eve.holt@reqres.in",
     "password": "pistol"
+  },
+  "userWithoutEmail": {
+    "email": "",
+    "password": "pistol"
   }
 }
