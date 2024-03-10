@@ -18,7 +18,7 @@ Feature: Pruebas para el servicio de actualizar usuario del API regres.in
       | 1      | requestData.informationToUpdateID1 |
       | 2      | requestData.informationToUpdateID2 |
 
-  #Se esperaba que este escenario devolviera un mensaje de error ya que se esta actualizando por id que no existe,
+  #Se esperaba que este escenario devolviera un status/mensaje de error ya que se esta actualizando por id que no existe,
   #al no hacer lo anterior, se deja la validación de que el status code sea 200 y que la respuesta obtenida tenga
   # la estructura/formato adecuado y los datos actualizados del usuario.
   Scenario: Actualizar información de un usuario por ID que no existe
@@ -30,7 +30,7 @@ Feature: Pruebas para el servicio de actualizar usuario del API regres.in
     Then status 200
     And match response == {"name":"#(dataToUpdate.name)","job":"#(dataToUpdate.job)","updatedAt":'#string'}
 
-  #Se esperaba que este escenario devolviera un mensaje de error ya que se esta actualizando por id inválido,
+  #Se esperaba que este escenario devolviera un status/mensaje de error ya que se esta actualizando por id inválido,
   #al no hacer lo anterior, se deja la validación de que el status code sea 200 y que la respuesta obtenida tenga
   # la estructura/formato adecuado y los datos actualizados del usuario.
   Scenario: Actualizar información de un usuario por ID inválido

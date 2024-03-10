@@ -1,4 +1,5 @@
 {
   "IdToDelete":2,
-  "nonExistingUserId": 123959598484484
+  "nonExistingUserId": 123959598484484,
+  "invalidId": "invalidID"
 }
